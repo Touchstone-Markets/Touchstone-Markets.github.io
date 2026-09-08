@@ -1,33 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const interTight = Inter_Tight({
+  variable: "--font-inter-tight",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Touchstone Markets",
-  description:
-    "Touchstone Markets — a new venue for principled price discovery.",
+  title: "touchstone markets",
+  description: "Open infrastructure for verifiable markets.",
   icons: { icon: "/brand/logo.png" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-black text-white">
-        {children}
-      </body>
+    <html lang="en" className={`${interTight.variable} h-full antialiased`}>
+      <body className="min-h-full bg-white text-black">{children}</body>
     </html>
   );
 }
