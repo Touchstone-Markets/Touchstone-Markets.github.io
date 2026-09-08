@@ -10,7 +10,6 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   title: "touchstone markets",
   description: "Open infrastructure for verifiable markets.",
-  icons: { icon: "/brand/logo.png" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
