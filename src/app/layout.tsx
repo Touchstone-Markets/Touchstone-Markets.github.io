@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import { Inter_Tight, Newsreader } from "next/font/google";
 import "./globals.css";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
   subsets: ["latin"],
+});
+
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -14,7 +20,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${interTight.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${interTight.variable} ${newsreader.variable} h-full antialiased`}
+    >
       <body className="min-h-full bg-white text-black">{children}</body>
     </html>
   );
