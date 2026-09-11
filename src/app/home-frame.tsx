@@ -25,7 +25,6 @@ export function HomeFrame() {
         />
         <div className="hero-shade" />
         <div className="hero-copy">
-          <p className="hero-kicker">Independent resolution infrastructure</p>
           <h1 className="hero-title">
             <span>Open infrastructure for</span>
             <span>verifiable markets.</span>
